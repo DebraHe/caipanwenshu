@@ -6,8 +6,8 @@
 # http://doc.scrapy.org/en/latest/topics/spider-middleware.html
 
 from scrapy import signals
-
-
+from panjueshu.settings import PROXIES
+import random
 class PanjueshuSpiderMiddleware(object):
     # Not all methods need to be defined. If a method is not defined,
     # scrapy acts as if the spider middleware does not modify the
@@ -63,6 +63,6 @@ class ProxyMiddleware(object):
     def process_request(self, request, spider):
 
         # Set the location of the proxy
-
-        request.meta['proxy'] = "http://114.239.146.145:808"
-
+        proxy_ip = random.choice(PROXIES)
+        print(proxy_ip)
+        request.meta['proxy'] = "http://%s"% proxy_ip
