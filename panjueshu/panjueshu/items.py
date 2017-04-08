@@ -10,17 +10,15 @@ import scrapy
 
 class PanjueshuItem(scrapy.Item):
     name=scrapy.Field()
-    types=scrapy.Field()
+    type=scrapy.Field()
     num=scrapy.Field()
     court=scrapy.Field()
-    dates=scrapy.Field()
+    date=scrapy.Field()
     url=scrapy.Field()
     docid=scrapy.Field()
-    proced=scrapy.Field()
-    cause=scrapy.Field()
-    area=scrapy.Field()
+    produce=scrapy.Field()
     yiju=scrapy.Field()
-    content=scrapy.Field()
+    content=scrapy.Field()  
 
 class LiaoItem(scrapy.Item):
     context=scrapy.Field()
