@@ -19,26 +19,111 @@ NEWSPIDER_MODULE = 'panjueshu.spiders'
 #USER_AGENT = 'panjueshu (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+ROBOTSTXT_OBEY = False
 
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-#CONCURRENT_REQUESTS = 32
+CONCURRENT_REQUESTS = 32
 
 # Configure a delay for requests for the same website (default: 0)
 # See http://scrapy.readthedocs.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
-DOWNLOAD_DELAY = 0.6
+DOWNLOAD_DELAY = 2
+PROXIES = ['125.88.74.122:81',
+               '183.95.80.165:8080',
+               '59.37.160.57:8081',
+               '124.133.230.254:80',
+               '183.78.183.156:82',
+               '124.88.67.83:843',
+               '42.81.58.199:80',
+               '124.88.67.9:80',
+               '180.167.34.187:80',
+               '183.78.183.156:82',
+               '125.88.74.122:85',
+               '124.88.67.22:83',
+               '14.152.93.79:8080',
+               '182.38.36.42:8998',
+               '122.96.59.98:82',
+               '117.95.19.112:8998',
+               '14.127.200.59:8081',
+               '221.3.6.2:8081',
+               '182.112.128.115:80',
+               '124.88.67.9:843',
+               '171.8.79.143:8080',
+               '180.136.83.16:8998',
+               '220.174.236.211:80',
+               '124.88.67.17:83',
+               '42.81.58.199:80',
+               '183.165.150.216:8998',
+               '183.78.183.156:82',
+               '218.26.227.108:80',
+               '124.88.67.9:83',
+               '175.30.124.128:80',
+               '180.169.59.222:8080',
+               '60.250.72.252:8080',
+               '222.92.141.250:80',
+               '202.107.222.50:80',
+               '122.116.229.240:80',
+               '112.11.126.198:80',
+               '124.88.67.34:82',
+               '220.174.236.211:80',
+               '119.254.84.90:80',
+               '118.122.250.109:80',
+               '211.140.151.220:80',
+               '118.99.178.21:8080',
+               '222.169.193.162:8099',
+               '111.207.231.14:8080',
+               '112.11.126.202:80',
+               '180.167.34.187:80',
+               '120.132.6.206:80',
+               '122.228.179.178:80',
+               '218.4.101.130:83',
+               '122.193.14.102:80',
+               '111.12.96.188:80',
+               '111.7.174.135:80',
+               '101.204.163.82:8080',
+               '58.52.201.119:8080',
+               '183.95.80.165:8080',
+               '124.234.157.250:80',
+               '112.11.126.197:80',
+               '111.206.163.235:80',
+               '58.221.38.170:8080',
+               '101.230.214.25:8080',
+               '220.174.236.211:80',
+               '183.78.183.156:82',
+               '106.58.127.229:80',
+               '112.11.126.202:8080',
+               '61.135.217.3:80',
+               '111.12.96.188:80',
+               '119.254.84.90:80',
+               '124.234.157.250:80',
+               '112.11.126.204:8080',
+               '222.92.141.250:80',
+               '106.58.115.12:80',
+               '112.11.126.198:8080',
+               '60.250.72.252:8080',
+               '218.104.148.157:8080',
+               '122.229.17.128:80',
+               '122.228.179.178:80',
+               '202.107.222.50:80',
+               '112.11.126.201:8080',
+               '42.81.58.199:80',
+               '118.99.178.21:8080',
+               '14.152.93.79:8080',
+               '61.191.41.130:80',
+               '42.81.58.198:80',
+               '222.73.27.178:80'
+    ]
 # The download delay setting will honor only one of:
 #CONCURRENT_REQUESTS_PER_DOMAIN = 16
 #CONCURRENT_REQUESTS_PER_IP = 16
-#DOWNLOADER_MIDDLEWARES = {
+DOWNLOADER_MIDDLEWARES = {
 
-#    'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
+    'scrapy.contrib.downloadermiddleware.httpproxy.HttpProxyMiddleware': 110,
 
-#    'panjueshu.middlewares.ProxyMiddleware': 100,
+    'panjueshu.middlewares.ProxyMiddleware': 100,
 
-#}
+}
 
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
@@ -96,3 +181,4 @@ DOWNLOAD_DELAY = 0.6
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
